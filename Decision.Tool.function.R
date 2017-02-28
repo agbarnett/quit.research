@@ -41,9 +41,10 @@ pplot = ggplot(data=for.plot.prior.posterior, aes(x=theta, y=prior, fill=group))
   ylab('Probability density')+
   scale_fill_manual(name=NULL, values=cbPalette[2:3])+
   geom_vline(xintercept=mean.prob, col=cbPalette[4], size=1.1)+
-  geom_text(aes(x=0.07, y=0, label='Plodder', vjust=1))+
-  geom_text(aes(x=0.7, y=0, label='Genius', vjust=1))+
-  theme(plot.margin=unit(c(1, 1, 1, 1), "mm"), legend.position=c(0.8, 0.8))
+  geom_text(aes(x=0.07, y=0, label='Plodder'), vjust=0, size=7)+
+  geom_text(aes(x=0.7, y=0, label='Genius'), vjust=0, size=7)+
+  theme(plot.margin=unit(c(1, 1, 1, 1), "mm"), legend.position=c(0.8, 0.8),
+        text=element_text(size = 20))
 
 # return
 ret = list()
